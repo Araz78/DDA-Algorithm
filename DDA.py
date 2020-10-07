@@ -7,13 +7,10 @@ y2 = int(input("Please Enter Value of y2: "))
 #=========================================== Calculate the value of m
 Delta_y = y2 - y1
 Delta_x = x2 - x1
-m = float(Delta_y / Delta_x)
+m = abs(float(Delta_y / Delta_x))
 #=========================================== Insert the values ​​of x,y
 if m < 1:
-    X_k = []
-    for xk in range(x1, x2+1):
-        X_k.append(xk)
-
+    X_k = [xk for xk in range(x1 , x2+1)]
     len_X_k = len(X_k)
 
     Y_k = []
@@ -26,10 +23,7 @@ if m < 1:
         Y_k.append(w_round)
 
 else :
-    Y_k = []
-    for yk in range(y1, y2+1):
-        Y_k.append(yk)
-
+    Y_k = [yk for yk in range(y1 , y2+1)]
     len_Y_k = len(Y_k)
 
     X_k = []
